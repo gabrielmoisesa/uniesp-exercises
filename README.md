@@ -1,2 +1,2 @@
 # uniesp-exercises
-Exercícios desenvolvidos ao longo do curso de Ciências da Computação na UNIESP.
+Exercícios de programação desenvolvidos ao longo do curso de Ciências da Computação na UNIESP.
