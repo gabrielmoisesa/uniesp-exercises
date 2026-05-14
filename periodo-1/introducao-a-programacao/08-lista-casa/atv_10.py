@@ -15,7 +15,7 @@ for i in range(len(student_names)):
   if student_grades[i] >= 7:
     is_aproved = "Aprovado"
   
-  print("Nome do aluno:", student_names[i])
+  print("Aluno:", student_names[i])
   print("Nota:", student_grades[i])
   print("Situação:", is_aproved)
   print()
