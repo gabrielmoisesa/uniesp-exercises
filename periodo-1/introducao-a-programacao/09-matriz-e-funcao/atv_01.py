@@ -16,6 +16,6 @@ def printMatrixTable(matrix):
   for l in matrix:
     print(l)
 
-createMatrix(2, 3)
+createMatrix(3, 3)
 print()
 printMatrixTable(matriz)
