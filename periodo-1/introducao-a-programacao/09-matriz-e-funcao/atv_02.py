@@ -1,6 +1,6 @@
-from atv_01 import createMatrix
+from atv_01 import create_matrix
 
-def sumMatrix(matrix):
+def sum_matrix(matrix):
   total = 0
 
   for l in matrix:
@@ -10,7 +10,7 @@ def sumMatrix(matrix):
   return total
 
 if __name__ == "__main__":
-  matriz = createMatrix(2, 3)
-  soma = sumMatrix(matriz)
+  matriz = create_matrix(2, 3)
+  soma = sum_matrix(matriz)
 
   print(f"Soma total da matriz: {soma}")

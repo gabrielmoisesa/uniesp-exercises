@@ -1,4 +1,4 @@
-def createMatrix(row_size, column_size):
+def create_matrix(row_size, column_size):
   matrix = []
 
   for i in range(row_size):
@@ -15,11 +15,11 @@ def createMatrix(row_size, column_size):
   print()
   return matrix
 
-def printMatrixTable(matrix):
+def print_matrix_table(matrix):
   for l in matrix:
     print(l)
 
 if __name__ == "__main__":
-  matriz = createMatrix(3, 3)
+  matriz = create_matrix(3, 3)
   print()
-  printMatrixTable(matriz)
+  print_matrix_table(matriz)

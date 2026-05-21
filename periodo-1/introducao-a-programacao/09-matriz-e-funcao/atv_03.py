@@ -1,6 +1,6 @@
-from atv_01 import createMatrix
+from atv_01 import create_matrix
 
-def greatestMatrixValue(matrix):
+def greatest_matrix_value(matrix):
   greatest_number = matrix[0][0]
 
   for l in matrix:
@@ -12,7 +12,7 @@ def greatestMatrixValue(matrix):
 
 
 if __name__ == "__main__":
-  matriz = createMatrix(3, 3)
-  maior_valor = greatestMatrixValue(matriz)
+  matriz = create_matrix(3, 3)
+  maior_valor = greatest_matrix_value(matriz)
 
   print(f"O maior valor da matriz é {maior_valor}")
