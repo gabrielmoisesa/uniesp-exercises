@@ -1,14 +1,21 @@
 matriz = []
 
-for i in range(3):
-  lista = []
+def createMatrix(size):
+  for i in range(size):
+    list = []
+    print()
+    print(f"Linha {i}")
 
-  print(f"Linha {i}")
-  for j in range(3):
-    num = int(input(f"{j} - Digite um valor: "))
-    lista.append(num)
+    for j in range(size):
+      num = int(input(f"{j} - Digite um valor: "))
+      list.append(num)
 
-  matriz.append(lista)
+    matriz.append(list)
 
-for l in matriz:
-  print(l)
+def printMatrixTable(matrix):
+  for l in matrix:
+    print(l)
+
+createMatrix(3)
+print()
+printMatrixTable(matriz)
