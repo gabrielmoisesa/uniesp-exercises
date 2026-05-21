@@ -12,12 +12,14 @@ def createMatrix(row_size, column_size):
       
     matrix.append(list)
 
+  print()
   return matrix
 
 def printMatrixTable(matrix):
   for l in matrix:
     print(l)
 
-matriz = createMatrix(3, 3)
-print()
-printMatrixTable(matriz)
+if __name__ == "__main__":
+  matriz = createMatrix(3, 3)
+  print()
+  printMatrixTable(matriz)
