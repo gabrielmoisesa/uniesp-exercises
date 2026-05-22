@@ -1,4 +1,4 @@
-def create_matrix(row_size, column_size):
+def create_matrix(row_size, column_size, numeric_type):
   matrix = []
 
   for i in range(row_size):
@@ -7,7 +7,10 @@ def create_matrix(row_size, column_size):
     print(f"Linha {i}")
 
     for j in range(column_size):
-      num = int(input(f"{j} - Digite um valor: "))
+      if numeric_type == float:
+        num = float(input(f"{j} - Digite um valor: "))
+      else:
+        num = int(input(f"{j} - Digite um valor: "))
       list.append(num)
       
     matrix.append(list)
