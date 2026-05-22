@@ -1,4 +1,4 @@
-def create_matrix(row_size, column_size, numeric_type):
+def create_matrix(row_size, column_size, numeric_type=int):
   matrix = []
 
   for i in range(row_size):
