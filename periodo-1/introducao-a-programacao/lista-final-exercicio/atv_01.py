@@ -35,6 +35,15 @@ def get_lowest_number(numbers):
   
   return lowest_num
 
+def get_above_average(numbers, average):
+  above_average = []
+
+  for i in numbers:
+    if i > average:
+      above_average.append(i)
+  
+  return above_average
+
 if __name__ == "__main__":
   notas = create_list(5, float)
-  print(get_lowest_number(notas))
+  print(get_above_average(notas, 7))
