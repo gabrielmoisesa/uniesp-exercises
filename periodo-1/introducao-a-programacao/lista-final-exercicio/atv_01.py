@@ -17,6 +17,15 @@ def create_list(size, type=str):
 def get_average(averages):
   return sum(averages) / len(averages)
 
+def get_biggest_number(numbers):
+  biggest_num = numbers[0]
+
+  for i in numbers:
+    if i > biggest_num:
+      biggest_num = i
+  
+  return biggest_num
+
 if __name__ == "__main__":
   notas = create_list(5, float)
-  print(get_average(notas))
+  print(get_biggest_number(notas))
