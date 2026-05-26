@@ -5,7 +5,7 @@ def create_list(size, type=str):
     if type == int:
       item = int(input(f"{i} - Digite um número inteiro: "))
     elif type == float:
-      item = int(input(f"{i} - Digite um número decimal: "))
+      item = float(input(f"{i} - Digite um número decimal: "))
     else:
       item = input(f"{i} - Digite um texto: ")
     
