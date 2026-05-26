@@ -1,4 +1,4 @@
-def createList(size, type=str):
+def create_list(size, type=str):
   list = []
 
   for i in range(1, size + 1):
@@ -11,4 +11,12 @@ def createList(size, type=str):
     
     list.append(item)
   
+  print()
   return list
+
+def get_average(averages):
+  return sum(averages) / len(averages)
+
+if __name__ == "__main__":
+  notas = create_list(5, float)
+  print(get_average(notas))
