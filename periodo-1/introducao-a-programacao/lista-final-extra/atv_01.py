@@ -15,7 +15,10 @@ def create_list(size, type=str):
   return list
 
 def get_average(averages):
-  return sum(averages) / len(averages)
+  if len(averages) > 0:
+    return sum(averages) / len(averages)
+  else:
+    return 0
 
 def get_biggest_number(numbers):
   biggest_num = numbers[0]
