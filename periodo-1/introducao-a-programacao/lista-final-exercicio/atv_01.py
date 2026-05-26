@@ -26,6 +26,15 @@ def get_biggest_number(numbers):
   
   return biggest_num
 
+def get_lowest_number(numbers):
+  lowest_num = numbers[0]
+
+  for i in numbers:
+    if i < lowest_num:
+      lowest_num = i
+  
+  return lowest_num
+
 if __name__ == "__main__":
   notas = create_list(5, float)
-  print(get_biggest_number(notas))
+  print(get_lowest_number(notas))
