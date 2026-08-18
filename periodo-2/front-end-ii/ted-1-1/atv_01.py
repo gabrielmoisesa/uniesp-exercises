@@ -1,7 +1,7 @@
 alturasFeminino = []
 alturasMasculino = []
 
-for i in range(4):
+for i in range(15):
     genero = input("\nInforme o gênero: ")
     altura = float(input("Informe a altura: "))
 
