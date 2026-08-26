@@ -1,4 +1,4 @@
-public class Ex02 {
+public class Ex02_DadosPessoais {
   public static void main(String[] args) {
     String nome = "Gabriel";
     int idade = 22;

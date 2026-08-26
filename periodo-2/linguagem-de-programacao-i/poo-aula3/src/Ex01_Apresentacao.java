@@ -1,4 +1,4 @@
-public class Ex01 {
+public class Ex01_Apresentacao {
   public static void main(String[] args) {
     System.out.println("================================\n" + //
         "MEU PRIMEIRO PROGRAMA\n" + //
