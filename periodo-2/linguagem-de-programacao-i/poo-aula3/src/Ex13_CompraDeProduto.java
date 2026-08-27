@@ -21,5 +21,4 @@ public class Ex13_CompraDeProduto {
       System.out.println("Total: R$ " + preco * quantidade);
     }
   }
-
 }
