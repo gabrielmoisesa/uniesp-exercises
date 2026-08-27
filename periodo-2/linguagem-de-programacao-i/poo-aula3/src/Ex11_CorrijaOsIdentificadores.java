@@ -1,4 +1,5 @@
 public class Ex11_CorrijaOsIdentificadores {
+  @SuppressWarnings("unused")
   public static void main(String[] args) {
     // O código abaixo possui identificadores inválidos. Corrija-os para que o
     // programa possa ser compilado:
