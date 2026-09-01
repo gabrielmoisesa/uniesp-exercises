@@ -1,4 +1,7 @@
 public class Questoes {
+  // ============
+  // Exercício 1
+  // ============
   // Analise o código abaixo:
   public static void exercicio1() {
     int a = 10;
@@ -31,6 +34,9 @@ public class Questoes {
   // R: Significa que essa variável está delimitada a ser usada apenas em um certo
   // bloco de código em que ela está.
 
+  // ============
+  // Exercício 2
+  // ============
   // Observe:
   // public static void exercicio2() {
   // if (10 > 5) {
@@ -60,4 +66,28 @@ public class Questoes {
     System.out.println(numero);
   }
 
+  // ============
+  // Exercício 3
+  // ============
+  // Crie quatro variáveis: int, String, double e boolean.
+  // Primeiro, faça apenas a declaração das variáveis.
+  // Depois, faça a inicialização delas em linhas separadas.
+  // Ao final, apresente todos os valores utilizando System.out.println().
+
+  public static void exercicio3() {
+    int numero;
+    String nome;
+    double preco;
+    boolean rodando;
+
+    numero = 5;
+    nome = "Gabriel";
+    preco = 5.99;
+    rodando = true;
+
+    System.out.println(numero);
+    System.out.println(nome);
+    System.out.println(preco);
+    System.out.println(rodando);
+  }
 }
