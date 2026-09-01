@@ -69,11 +69,6 @@ public class Questoes {
   // ============
   // Exercício 3
   // ============
-  // Crie quatro variáveis: int, String, double e boolean.
-  // Primeiro, faça apenas a declaração das variáveis.
-  // Depois, faça a inicialização delas em linhas separadas.
-  // Ao final, apresente todos os valores utilizando System.out.println().
-
   public static void exercicio3() {
     int numero;
     String nome;
@@ -89,5 +84,18 @@ public class Questoes {
     System.out.println(nome);
     System.out.println(preco);
     System.out.println(rodando);
+  }
+
+  // ============
+  // Exercício 4
+  // ============
+  public static void exercicio4() {
+    final String nome = "João";
+    final String curso = "Programação Java";
+    final String mensagem = "\"Bem-vindo ao curso!\"";
+
+    System.out.println("Nome: " + nome + "\nCurso: " + curso + "\nMensagem: " + mensagem);
+
+    System.out.println("\nNome:\tGabriel\nCurso:\t\\\"Ciência da Computação\"\\");
   }
 }

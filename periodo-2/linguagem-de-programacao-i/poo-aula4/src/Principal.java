@@ -8,5 +8,8 @@ public class Principal {
 
     System.out.println("\nExercício 3");
     Questoes.exercicio3();
+
+    System.out.println("\nExercício 4");
+    Questoes.exercicio4();
   }
 }
