@@ -30,4 +30,34 @@ public class Questoes {
   // um determinado escopo.
   // R: Significa que essa variável está delimitada a ser usada apenas em um certo
   // bloco de código em que ela está.
+
+  // Observe:
+  // public static void exercicio2() {
+  // if (10 > 5) {
+  // int numero = 50;
+  // }
+  // System.out.println(numero);
+  // }
+
+  // Sua tarefa é:
+  // 1. Identificar o problema.
+  // R: Uso de variável fora do escopo.
+
+  // 2. Explicar por que ele acontece.
+  // R: Acontece pois a variável foi declarada dentro do bloco do if, sendo
+  // possível ser usada apenas dentro daquele bloco e não fora.
+
+  // 3. Corrigir o programa para que o valor 50 possa ser apresentado fora do
+  // bloco if.
+
+  public static void exercicio2() {
+    int numero;
+
+    if (10 > 5) {
+      numero = 50;
+    }
+
+    System.out.println(numero);
+  }
+
 }
