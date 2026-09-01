@@ -98,4 +98,15 @@ public class Questoes {
 
     System.out.println("\nNome:\tGabriel\nCurso:\t\\\"Ciência da Computação\"\\");
   }
+
+  // ============
+  // Exercício 5
+  // ============
+  public static void exercicio5() {
+    String nome = "Gabriel";
+    String curso = "Ciências da Computação";
+    String instituicao = "UNIESP";
+
+    System.out.println("Nome: " + nome + "\nCurso: " + curso + "\nInstituição: " + instituicao);
+  }
 }
