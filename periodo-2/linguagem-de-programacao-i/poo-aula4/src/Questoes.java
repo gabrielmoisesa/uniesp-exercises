@@ -185,4 +185,19 @@ public class Questoes {
 
     System.out.println(b); // = -56
   }
+
+  // ============
+  // Exercício 11
+  // ============
+  public static void exercicio11() {
+    int n1 = Math.abs(-3);
+    double n2 = Math.pow(2, 3);
+    double n3 = Math.sqrt(16);
+    long n4 = Math.round(2.75);
+
+    System.out.println("Math.abs(-3) = " + n1);
+    System.out.println("Math.pow(2, 3) = " + n2);
+    System.out.println("Math.sqrt(16) = " + n3);
+    System.out.println("Math.round(2.75) = " + n4);
+  }
 }
