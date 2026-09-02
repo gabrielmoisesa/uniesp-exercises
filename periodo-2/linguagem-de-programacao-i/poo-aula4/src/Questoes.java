@@ -200,4 +200,17 @@ public class Questoes {
     System.out.println("Math.sqrt(16) = " + n3);
     System.out.println("Math.round(2.75) = " + n4);
   }
+
+  // ============
+  // Exercício 12
+  // ============
+  public static void exercicio12() {
+    double graus = 180;
+    double radianos = Math.toRadians(graus);
+    double grausDeVolta = Math.toDegrees(radianos);
+
+    System.out.println("PI: " + Math.PI);
+    System.out.println(graus + " graus em radianos: " + radianos);
+    System.out.println(radianos + " radianos em graus: " + grausDeVolta);
+  }
 }

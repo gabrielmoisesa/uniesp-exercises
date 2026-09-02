@@ -32,5 +32,8 @@ public class Principal {
 
     System.out.println("\nExercício 11");
     Questoes.exercicio11();
+
+    System.out.println("\nExercício 12");
+    Questoes.exercicio12();
   }
 }
