@@ -175,4 +175,14 @@ public class Questoes {
     System.out.println(f);
     System.out.println(d);
   }
+
+  // ============
+  // Exercício 10
+  // ============
+  public static void exercicio10() {
+    int x = 200;
+    byte b = (byte) x;
+
+    System.out.println(b); // = -56
+  }
 }
