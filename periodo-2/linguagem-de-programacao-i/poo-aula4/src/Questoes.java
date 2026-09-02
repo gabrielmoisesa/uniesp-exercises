@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Questoes {
   // ============
   // Exercício 1
@@ -225,5 +227,25 @@ public class Questoes {
     System.out.println(n1);
     System.out.println(n2);
     System.out.println(n3);
+  }
+
+  // ============
+  // Exercício 14
+  // ============
+  public static void exercicio14() {
+    ArrayList<Integer> numerosSorteados = new ArrayList<>();
+
+    for (int i = 0; i < 6; i++) {
+      int numeroAleatorio = 1 + (int) (Math.random() * ((60 - 1) + 1));
+
+      if (numerosSorteados.contains(numeroAleatorio)) {
+        i--;
+        continue;
+      }
+
+      numerosSorteados.add(numeroAleatorio);
+    }
+
+    numerosSorteados.forEach(System.out::println);
   }
 }
