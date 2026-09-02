@@ -213,4 +213,17 @@ public class Questoes {
     System.out.println(graus + " graus em radianos: " + radianos);
     System.out.println(radianos + " radianos em graus: " + grausDeVolta);
   }
+
+  // ============
+  // Exercício 13
+  // ============
+  public static void exercicio13() {
+    int n1 = 0 + (int) (Math.random() * ((99 - 0) + 1));
+    int n2 = 0 + (int) (Math.random() * ((99 - 0) + 1));
+    int n3 = 0 + (int) (Math.random() * ((99 - 0) + 1));
+
+    System.out.println(n1);
+    System.out.println(n2);
+    System.out.println(n3);
+  }
 }
