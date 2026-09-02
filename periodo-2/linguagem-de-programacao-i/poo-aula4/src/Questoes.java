@@ -109,4 +109,27 @@ public class Questoes {
 
     System.out.println("Nome: " + nome + "\nCurso: " + curso + "\nInstituição: " + instituicao);
   }
+
+  // ============
+  // Exercício 6
+  // ============
+  public static void exercicio6() {
+    int inteiro = 650;
+    long inteiroLongo = inteiro;
+
+    float altura = 1.79f;
+    double alturaDouble = altura;
+
+    char caractere = '5';
+    int caractereInteiro = caractere;
+
+    System.out.println("Inteiro: " + inteiro);
+    System.out.println("Inteiro em long: " + inteiroLongo);
+    System.out.println("\nFloat: " + altura);
+    System.out.println("Float em double: " + alturaDouble);
+    System.out.println("\nChar: " + caractere);
+    System.out.println("Char como int: " + caractereInteiro);
+
+    System.out.println("Soma de int + char + long + double: " + (inteiro + caractere + inteiroLongo + alturaDouble));
+  }
 }
