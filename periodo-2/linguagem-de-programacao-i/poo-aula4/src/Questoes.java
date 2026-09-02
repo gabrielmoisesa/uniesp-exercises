@@ -132,4 +132,23 @@ public class Questoes {
 
     System.out.println("Soma de int + char + long + double: " + (inteiro + caractere + inteiroLongo + alturaDouble));
   }
+
+  // ============
+  // Exercício 7
+  // ============
+  public static void exercicio7() {
+    long valorLong = 2;
+    float valorFloat = 2.75f;
+    double valorDouble = 6.5;
+
+    int longEmInt = (int) valorLong;
+    int floatEmInt = (int) valorFloat;
+    int doubleEmInt = (int) valorDouble;
+    float doubleEmFloat = (float) valorDouble;
+
+    System.out.println("O valor long: " + valorLong + " em int é = " + longEmInt);
+    System.out.println("O valor float: " + valorFloat + " em int é = " + floatEmInt);
+    System.out.println("O valor double: " + valorDouble + " em int é = " + doubleEmInt);
+    System.out.println("O valor double: " + valorDouble + " em float é = " + doubleEmFloat);
+  }
 }
