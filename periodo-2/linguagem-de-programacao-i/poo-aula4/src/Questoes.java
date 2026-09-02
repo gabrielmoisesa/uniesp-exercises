@@ -151,4 +151,17 @@ public class Questoes {
     System.out.println("O valor double: " + valorDouble + " em int é = " + doubleEmInt);
     System.out.println("O valor double: " + valorDouble + " em float é = " + doubleEmFloat);
   }
+
+  // ============
+  // Exercício 8
+  // ============
+  public static void exercicio8() {
+    int j = (int) (long) 1.5;
+    double d = (int) 1.5;
+    double d2 = (float) 1.5;
+
+    System.out.println(j);
+    System.out.println(d);
+    System.out.println(d2);
+  }
 }
