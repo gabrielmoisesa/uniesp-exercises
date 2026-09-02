@@ -164,4 +164,15 @@ public class Questoes {
     System.out.println(d);
     System.out.println(d2);
   }
+
+  // ============
+  // Exercício 9
+  // ============
+  public static void exercicio9() {
+    float f = 32.5f;
+    double d = 32.5;
+
+    System.out.println(f);
+    System.out.println(d);
+  }
 }
