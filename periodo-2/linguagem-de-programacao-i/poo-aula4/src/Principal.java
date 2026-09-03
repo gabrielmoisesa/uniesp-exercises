@@ -44,5 +44,8 @@ public class Principal {
 
     System.out.println("\nExercício 15");
     Questoes.exercicio15();
+
+    System.out.println("\nExercício 16");
+    Questoes.exercicio16();
   }
 }

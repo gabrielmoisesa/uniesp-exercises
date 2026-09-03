@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Questoes {
+  static Scanner scanner = new Scanner(System.in);
+
   // ============
   // Exercício 1
   // ============
@@ -254,18 +256,39 @@ public class Questoes {
   // Exercício 15
   // ============
   public static void exercicio15() {
-    try (Scanner scanner = new Scanner(System.in)) {
-      System.out.print("Digite seu peso na Terra (kg): ");
-      double pesoTerra = scanner.nextInt();
+    System.out.print("Digite seu peso na Terra (kg): ");
+    double pesoTerra = scanner.nextInt();
 
-      double pesoMercurio = pesoTerra * 0.37;
-      double pesoVenus = pesoTerra * 0.88;
-      double pesoMarte = pesoTerra * 0.38;
+    double pesoMercurio = pesoTerra * 0.37;
+    double pesoVenus = pesoTerra * 0.88;
+    double pesoMarte = pesoTerra * 0.38;
 
-      System.out.println("\nPeso na Terra: " + pesoTerra + " kg");
-      System.out.println("Peso em Mercúrio: " + pesoMercurio + " kg");
-      System.out.println("Peso em Vênus: " + pesoVenus + " kg");
-      System.out.println("Peso em Marte: " + pesoMarte + " kg");
-    }
+    System.out.println("\nPeso na Terra: " + pesoTerra + " kg");
+    System.out.println("Peso em Mercúrio: " + pesoMercurio + " kg");
+    System.out.println("Peso em Vênus: " + pesoVenus + " kg");
+    System.out.println("Peso em Marte: " + pesoMarte + " kg");
+  }
+
+  // ============
+  // Exercício 16
+  // ============
+  public static void exercicio16() {
+    System.out.println("Ponto 1 — Digite as coordenadas:");
+
+    System.out.print("x1: ");
+    double x1 = scanner.nextDouble();
+    System.out.print("y1: ");
+    double y1 = scanner.nextDouble();
+
+    System.out.println("Ponto 2 — Digite as coordenadas:");
+
+    System.out.print("x2: ");
+    double x2 = scanner.nextDouble();
+    System.out.print("y2: ");
+    double y2 = scanner.nextDouble();
+
+    double distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+    System.out.println("A distancia é: d = " + distancia);
   }
 }
