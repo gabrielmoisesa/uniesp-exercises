@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Questoes {
   // ============
@@ -247,5 +248,24 @@ public class Questoes {
     }
 
     numerosSorteados.forEach(System.out::println);
+  }
+
+  // ============
+  // Exercício 15
+  // ============
+  public static void exercicio15() {
+    try (Scanner scanner = new Scanner(System.in)) {
+      System.out.print("Digite seu peso na Terra (kg): ");
+      double pesoTerra = scanner.nextInt();
+
+      double pesoMercurio = pesoTerra * 0.37;
+      double pesoVenus = pesoTerra * 0.88;
+      double pesoMarte = pesoTerra * 0.38;
+
+      System.out.println("\nPeso na Terra: " + pesoTerra + " kg");
+      System.out.println("Peso em Mercúrio: " + pesoMercurio + " kg");
+      System.out.println("Peso em Vênus: " + pesoVenus + " kg");
+      System.out.println("Peso em Marte: " + pesoMarte + " kg");
+    }
   }
 }
