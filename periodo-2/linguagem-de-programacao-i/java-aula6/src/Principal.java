@@ -6,6 +6,7 @@ import exercicios.Ex03;
 import exercicios.Ex04;
 import exercicios.Ex05;
 import exercicios.Ex06;
+import exercicios.Ex07;
 
 public class Principal {
     public static void main(String[] args) {
@@ -27,6 +28,9 @@ public class Principal {
 
             System.out.println("\nExercício 6");
             Ex06.classificacaoIdade(scanner);
+
+            System.out.println("\nExercício 7");
+            Ex07.calculadoraComSwitch(scanner);
         }
     }
 }
