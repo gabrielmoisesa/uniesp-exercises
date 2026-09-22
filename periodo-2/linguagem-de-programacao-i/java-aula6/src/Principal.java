@@ -3,6 +3,7 @@ import java.util.Scanner;
 import exercicios.Ex01;
 import exercicios.Ex02;
 import exercicios.Ex03;
+import exercicios.Ex04;
 
 public class Principal {
     public static void main(String[] args) {
@@ -15,6 +16,9 @@ public class Principal {
 
             System.out.println("\nExercício 3");
             Ex03.aprovacaoDoAluno(scanner);
+
+            System.out.println("\nExercício 4");
+            Ex04.descontoNaCompra(scanner);
         }
     }
 }
