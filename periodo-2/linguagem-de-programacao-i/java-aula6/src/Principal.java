@@ -1,5 +1,9 @@
 import java.util.Scanner;
 
+import exercicios.Ex01;
+import exercicios.Ex02;
+import exercicios.Ex03;
+
 public class Principal {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
