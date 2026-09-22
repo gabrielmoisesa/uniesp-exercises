@@ -8,6 +8,9 @@ public class Principal {
 
             System.out.println("\nExercício 2");
             Ex02.classificarSinal(scanner);
+
+            System.out.println("\nExercício 3");
+            Ex03.aprovacaoDoAluno(scanner);
         }
     }
 }
