@@ -20,4 +20,20 @@ public class Questoes {
         System.out.println("\nOs números " + n1 + " e " + n2 + " são iguais. ");
       }
     }
+
+  // ============
+  // Exercício 2
+  // ============
+  public static void exercicio2() {
+    System.out.print("Digite um número: ");
+    int numero = scanner.nextInt();
+
+    if (numero > 0) {
+        System.out.println(numero + " é um número positivo.");
+    } else if (numero < 0) {
+        System.out.println(numero + " é um número negativo.");
+    } else {
+        System.out.println(numero + " é igual a zero.");
+    }
+  }
 }
