@@ -8,6 +8,7 @@ import exercicios.Ex05;
 import exercicios.Ex06;
 import exercicios.Ex07;
 import exercicios.Ex08;
+import exercicios.Ex09;
 
 public class Principal {
     public static void main(String[] args) {
@@ -35,6 +36,9 @@ public class Principal {
 
             System.out.println("\nExercício 8");
             Ex08.diaDaSemana(scanner);
+
+            System.out.println("\nExercício 9");
+            Ex09.menuDeLanchonete(scanner);
         }
     }
 }
