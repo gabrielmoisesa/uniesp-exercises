@@ -13,6 +13,7 @@ import exercicios.Ex10;
 import exercicios.Ex11;
 import exercicios.Ex12;
 import exercicios.Ex13;
+import exercicios.Ex14;
 
 public class Principal {
     public static void main(String[] args) {
@@ -55,6 +56,9 @@ public class Principal {
 
             System.out.println("\nExercício 13");
             Ex13.sistemaDePagamento(scanner);
+
+            System.out.println("\nExercício 14");
+            Ex14.verificacaoCategoria(scanner);
         }
     }
 }
