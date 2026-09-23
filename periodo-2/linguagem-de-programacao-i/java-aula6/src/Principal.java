@@ -12,6 +12,7 @@ import exercicios.Ex09;
 import exercicios.Ex10;
 import exercicios.Ex11;
 import exercicios.Ex12;
+import exercicios.Ex13;
 
 public class Principal {
     public static void main(String[] args) {
@@ -51,6 +52,9 @@ public class Principal {
 
             System.out.println("\nExercício 12");
             Ex12.turnoEstudo(scanner);
+
+            System.out.println("\nExercício 13");
+            Ex13.sistemaDePagamento(scanner);
         }
     }
 }
