@@ -9,6 +9,7 @@ import exercicios.Ex06;
 import exercicios.Ex07;
 import exercicios.Ex08;
 import exercicios.Ex09;
+import exercicios.Ex10;
 
 public class Principal {
     public static void main(String[] args) {
@@ -39,6 +40,9 @@ public class Principal {
 
             System.out.println("\nExercício 9");
             Ex09.menuDeLanchonete(scanner);
+
+            System.out.println("\nExercício 10");
+            Ex10.comparacaoSenha(scanner);
         }
     }
 }

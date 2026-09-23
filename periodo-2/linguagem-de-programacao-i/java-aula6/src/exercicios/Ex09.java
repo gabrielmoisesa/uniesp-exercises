@@ -47,6 +47,7 @@ public class Ex09 {
 
     System.out.print("Informe a quantidade desejada: ");
     int quantidade = scanner.nextInt();
+    scanner.nextLine();
 
     if (quantidade <= 0) {
       System.out.println("Quantidade inválida. Escolha no mínimo 1 unidade.");
