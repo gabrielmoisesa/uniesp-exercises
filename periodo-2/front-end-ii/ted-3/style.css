@@ -1,0 +1,25 @@
+body {
+  background-color: #0a0908;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 8vh;
+  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+#base {
+  margin-top: 5vh;
+}
+
+#area {
+  color: greenyellow;
+  text-decoration: underline;
+}
