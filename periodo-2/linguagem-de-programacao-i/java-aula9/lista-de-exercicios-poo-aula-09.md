@@ -73,3 +73,141 @@ public static void metodoTeste() {
 ```
 
 R10: O modificador `static` indica que o método pertence à classe e não a uma instância específica da classe, permitindo que ele seja chamado sem criar um objeto da classe. O `void` indica que o método não retorna nenhum valor. A sintaxe de um método que retorna valor inclui o tipo de retorno antes do nome do método (por exemplo, `public int metodoComRetorno()`) e a palavra reservada `return` é usada para efetivamente retornar o valor desejado.
+
+## Parte 2 – Prática: Construindo Métodos
+
+### Exercício 1 – Escopo dos métodos dentro da classe
+
+> Observe o código abaixo. Atente para o escopo de cada método dentro da classe e observe que existem chaves mais externas, que delimitam toda a classe, e chaves mais internas, que circundam o alcance de cada método.
+
+```java
+public class Principal {
+
+    public static void main(String args[]) {
+        System.out.println("Patati, Patata");
+    }
+
+    public void escreva() {
+        System.out.println("Patati, Patata");
+    }
+
+}
+```
+
+> a) Quais são os dois métodos dentro da classe Principal?
+
+> b) Marque no código as chaves externas (da classe) e as chaves internas (de cada método).
+
+R1:
+
+a) Os dois métodos dentro da classe Principal são: `main` e `escreva`.
+
+b): 
+```java
+public class Principal { // Chave externa da classe
+    public static void main(String args[]) { // Chave interna do método main
+        System.out.println("Patati, Patata");
+    }
+
+    public void escreva() { // Chave interna do método escreva
+        System.out.println("Patati, Patata");
+    }
+
+}
+```
+
+### Exercício 2 – Chamando um método na mesma classe
+
+> Modifique o conteúdo do método main() para chamar o método escreva(). Observe que ainda estamos programando numa única classe.
+
+```java
+public class Principal {
+
+    public static void main(String args[]) {
+        escreva();
+    }
+
+    public static void escreva() {
+        System.out.println("Patati, Patata");
+    }
+}
+```
+
+> Explique: por que o método escreva() passou a ser static?
+
+R2: O método `escreva()` passou a ser `static` para que ele possa ser chamado diretamente dentro do método `main()`, sem a necessidade de criar uma instância da classe `Principal`. Métodos `static` pertencem à classe em si, permitindo que sejam acessados sem a criação de objetos.
+
+### Exercício 3 – Acessando um método de outra classe
+
+> A situação agora é um pouco diferente. Foi criada uma outra classe chamada Secundária, e o método escreva() foi implementado lá. Como acessamos esse método a partir da classe Principal?
+
+```java
+public class Principal {
+
+    public static void main(String args[]) {
+        //Como chamar o método escreva()?
+    }
+}
+
+public class Secundária {
+    
+    public void escreva() {
+        System.out.println("Patati, Patata");
+    }
+}
+```
+
+> a) Opção 1 – Criando objeto da classe: crie um objeto da classe Secundária e chame seu método escreva().
+
+> b) Opção 2 – Método estático: transforme o método em estático e chame-o digitando o nome da classe, um ponto e o nome do método.
+
+> c) Qual a diferença entre as duas opções?
+
+R3: A diferença entre as duas opções é que na opção 1, é necessário criar uma instância da classe Secundária para poder chamar o método escreva(), enquanto na opção 2, o método é estático e pode ser chamado diretamente pela classe, sem a necessidade de criar uma instância.
+
+### Exercício 4 – Média de um aluno
+
+> Faça um programa para ler 2 notas de um determinado aluno e calcular sua média.
+
+> *Observação: todo o código deve ficar no método main(), numa única classe.*
+
+R4: [Resposta no arquivo `src/MediaAluno`](src/MediaAluno.java).
+
+### Exercício 5 – Método sem retorno e sem parâmetros
+
+> Agora crie um método nesta mesma classe chamado calculaMedia. O método vai receber as notas digitadas pelo usuário e calcular a média.
+
+> - O método não tem retorno para quem chamou.
+> - O método não tem parâmetro (ainda).
+> - O método deve exibir no console a média do aluno.
+
+R5: [Resposta no arquivo `src/MediaAluno`](src/MediaAluno.java).
+
+### Exercício 6 – Método sem retorno e com parâmetros
+
+> Modifique o exercício anterior para passar os valores digitados pelo usuário por argumentos no método calculaMedia(n1, n2).
+
+> Use como referência a sintaxe:
+
+```java
+public void metodoExemplo (tipo nome_parametro) {
+    // Lista de instruções que serão executadas
+}
+```
+
+R6: [Resposta no arquivo `src/MediaAluno`](src/MediaAluno.java).
+
+### Exercício 7 – Método com retorno e com parâmetros
+
+> Modifique o exercício anterior para que o método calculaMédia receba parâmetros e retorne o valor da média. A exibição da média deve ser feita por quem chamou o método, a partir do valor retornado.
+
+> Use como referência a sintaxe:
+
+```java
+public tipo nome_metodo() {
+    // Lista de instruções
+    return valor;
+}
+```
+
+R7: [Resposta no arquivo `src/MediaAluno`](src/MediaAluno.java).
