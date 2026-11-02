@@ -211,3 +211,83 @@ public tipo nome_metodo() {
 ```
 
 R7: [Resposta no arquivo `src/MediaAluno`](src/MediaAluno.java).
+
+## Parte 3 – Hora do Treinamento: Mini Calculadora
+
+### Exercício 8 – Mini calculadora
+
+> Implementar um programa que realiza as 4 operações (+), (-), (/) e (*) entre dois números informados pelo usuário.
+> - Primeiro devem ser digitados 2 números. Em seguida, o usuário deve escolher a operação matemática e receber a resposta.
+> - Cada operação matemática deve ser implementada num método diferente.
+> - Crie também um método chamado menu() para apresentar as opções ao usuário e redirecionar para a operação escolhida.
+> - O programa deve ficar repetindo até a opção 5 (sair) ser escolhida.
+>
+> *Não utilize nenhuma estrutura de repetição. Faça apenas chamada aos métodos.*
+
+R8: [Resposta no arquivo `src/MiniCalculadora`](src/MiniCalculadora.java).
+
+## Parte 4 – Teoria: Métodos Construtores
+
+> **Questão 11.** Você já notou que, quando um objeto é instanciado, não passamos nada nos argumentos? Observe a linha abaixo e explique o que há dentro dos parênteses.
+
+```java
+Pessoa p1 = new Pessoa();
+```
+
+R11: Dentro dos parênteses, não há nenhum argumento sendo passado. Isso significa que o objeto `p1` está sendo criado utilizando o construtor padrão da classe `Pessoa`, que não requer parâmetros. O construtor é um método especial que é chamado automaticamente quando um objeto é instanciado, e ele inicializa o objeto com valores padrão ou realiza configurações iniciais.
+
+> **Questão 12.** Considere a classe Pessoa (atributos privados nome: String e fone: int; métodos setNome(String), getNome(), setFone(int) e getFone()). Compare as duas situações abaixo para atribuir o nome Walter e o telefone 55555555 a p1. Qual é mais fácil? Quantas linhas de código cada uma usa?
+
+```java
+// Situação 1
+Pessoa p1 = new Pessoa();
+p1.setNome("walter");
+p1.setFone(55555555);
+// Situação 2
+Pessoa p1 = new Pessoa ("Walter", 55555555);
+```
+
+R12: A situação 2 é mais fácil, pois permite a inicialização do objeto `p1` com os valores desejados em uma única linha de código, utilizando um construtor que aceita parâmetros. A situação 1 utiliza três linhas de código para criar o objeto e definir seus atributos, enquanto a situação 2 utiliza apenas uma linha.
+
+> **Questão 13.** Para que a classe Pessoa possa aceitar esses valores como argumentos na criação do objeto, o que é preciso criar na classe?
+
+R13: Para que a classe `Pessoa` possa aceitar esses valores como argumentos na criação do objeto, é preciso criar um **método construtor** que receba os parâmetros correspondentes aos atributos da classe. Esse construtor deve inicializar os atributos `nome` e `fone` com os valores fornecidos.
+
+> **Questão 14.** Explique as 5 regras para utilizar métodos construtores apresentadas na aula:
+> 1. Quando instanciamos um objeto, o que acontece com o método construtor de classe? Como o construtor funciona?
+> 2. Qual é a estrutura de um construtor? Que modificador de acesso possui, pode receber argumentos e qual tipo de retorno ele tem?
+> 3. Que nome o método construtor sempre terá?
+> 4. É possível ter mais de um método construtor na classe? Que condição cada um deve cumprir?
+> 5. O que acontece quando nenhum construtor é declarado?
+
+R14:
+1. Quando instanciamos um objeto, o método construtor da classe é chamado automaticamente. O construtor funciona inicializando o objeto recém-criado, configurando seus atributos e realizando qualquer configuração necessária para que o objeto esteja pronto para uso.
+2. A estrutura de um construtor é semelhante a de um método, mas ele não possui tipo de retorno (nem mesmo `void`). Ele pode receber argumentos e geralmente possui um modificador de acesso, como `public`, para permitir que seja chamado de fora da classe.
+3. O método construtor sempre terá o mesmo nome da classe em que ele está definido. Isso é uma convenção que permite ao compilador identificar o método como um construtor.
+4. É possível ter mais de um método construtor na classe, desde que cada um tenha uma assinatura diferente (ou seja, um número diferente de parâmetros ou tipos diferentes de parâmetros). Isso permite a sobrecarga de construtores, oferecendo diferentes maneiras de inicializar objetos da mesma classe.
+5. Quando nenhum construtor é declarado, o compilador cria automaticamente um construtor padrão (sem parâmetros) para a classe. Este construtor inicializa os atributos com seus valores padrão (por exemplo, 0 para números, null para objetos).
+
+> **Questão 15.** Observe os três construtores abaixo. Quantos métodos construtores a classe Pessoa possui? Em que eles diferem?
+
+```Java
+public Pessoa() { }
+public Pessoa(String n) { nome = n; }
+public Pessoa(String n, String f) { nome = n; fone = f; }
+```
+
+R15: A classe `Pessoa` possui três métodos construtores. Eles diferem na quantidade e no tipo de parâmetros que recebem:
+1. O primeiro construtor não recebe nenhum parâmetro e é o construtor padrão.
+2. O segundo construtor recebe um parâmetro do tipo `String` para inicializar o atributo `nome`.
+3. O terceiro construtor recebe dois parâmetros do tipo `String`, um para inicializar o atributo `nome` e outro para inicializar o atributo `fone`.
+
+> **Questão 16.** O que o construtor pode fazer com os argumentos recebidos? O que ele pode fazer caso o argumento seja nulo (null) ou vazio ("")?
+
+R16: O construtor pode validar os argumentos recebidos, realizando verificações para garantir que os valores sejam válidos antes de inicializar os atributos. Caso o argumento seja nulo (null) ou vazio (""), o construtor pode lançar uma exceção ou atribuir um valor padrão apropriado aos atributos.
+
+> **Questão 17.** Qual é a diferença entre os valores zero e null? O que indica “campo vazio”?
+
+R17: O valor zero (0) é um valor numérico que representa a ausência de quantidade ou magnitude. Já o valor null representa a ausência de um objeto ou referência. O que indica "campo vazio" é um campo que não contém nenhum valor, seja ele zero, null ou uma string vazia ("").
+
+> **Questão 18.** Em `Scanner teclado = new Scanner(System.in);`, o que é System.in? Por que o fato de System.in usar um buffer de linha pode ser fonte de aborrecimentos? O que acontece quando pressionamos ENTER e o que será preciso fazer em alguns aplicativos antes da próxima operação de entrada?
+
+R18: `System.in` é um fluxo de entrada padrão que representa a entrada do teclado. O fato de `System.in` usar um buffer de linha pode ser fonte de aborrecimentos porque ele lê a entrada do usuário até que o ENTER seja pressionado, armazenando tudo em um buffer. Quando pressionamos ENTER, o buffer é enviado para o programa, e qualquer entrada adicional pode ser afetada pelo conteúdo restante no buffer. Em alguns aplicativos, será preciso limpar o buffer ou consumir a linha restante antes da próxima operação de entrada para evitar problemas de leitura incorreta dos dados.
