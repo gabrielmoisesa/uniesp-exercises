@@ -291,3 +291,125 @@ R17: O valor zero (0) é um valor numérico que representa a ausência de quanti
 > **Questão 18.** Em `Scanner teclado = new Scanner(System.in);`, o que é System.in? Por que o fato de System.in usar um buffer de linha pode ser fonte de aborrecimentos? O que acontece quando pressionamos ENTER e o que será preciso fazer em alguns aplicativos antes da próxima operação de entrada?
 
 R18: `System.in` é um fluxo de entrada padrão que representa a entrada do teclado. O fato de `System.in` usar um buffer de linha pode ser fonte de aborrecimentos porque ele lê a entrada do usuário até que o ENTER seja pressionado, armazenando tudo em um buffer. Quando pressionamos ENTER, o buffer é enviado para o programa, e qualquer entrada adicional pode ser afetada pelo conteúdo restante no buffer. Em alguns aplicativos, será preciso limpar o buffer ou consumir a linha restante antes da próxima operação de entrada para evitar problemas de leitura incorreta dos dados.
+
+## Parte 5 – Prática: Métodos Construtores
+
+### Exercício 9 – Construtor padrão
+
+> Observe a classe abaixo. Quando não declaramos explicitamente um construtor, qual construtor é iniciado?
+
+```java
+public class Produto {
+
+    public Produto() { }
+}
+```
+
+R9: Quando não declaramos explicitamente um construtor, o compilador Java cria automaticamente um construtor padrão sem parâmetros. No caso da classe `Produto`, o construtor `public Produto() { }` é o construtor padrão que é iniciado.
+
+### Exercício 10 – Validando argumentos no construtor
+
+> Complete os espaços do if para negar valores vazios ou null na variável n.
+
+```java
+public class Pessoa {
+    private String nome;
+    public Pessoa(String n) {
+        if( ________________ || _________________ )
+            System.out.println("nome inválido");
+        else
+            nome = n;
+    }
+}
+```
+
+R10:
+
+```java
+public class Pessoa {
+    private String nome;
+    public Pessoa(String n) {
+        if( n == null || n.isEmpty() )
+            System.out.println("nome inválido");
+        else
+            nome = n;
+    }
+}
+```
+
+### Exercício 11 – Construtor que atribui valor na instanciação
+
+> Observe a classe Contador e identifique a variável de instância, o método get e o construtor. Explique como todo objeto instanciado irá atribuir o valor inicial zero à variável de instância cont.
+
+```java
+public class Contador {
+
+    private int cont;
+    
+    public Contador() {
+        cont = 0;
+    }
+
+    public int getCont() {
+        return cont;
+    }
+}
+```
+
+R11: Na classe `Contador`, a variável de instância é `cont`, que é do tipo `int`. O método `getCont()` é um método de acesso (getter) que retorna o valor da variável `cont`. O construtor `public Contador()` é chamado automaticamente quando um objeto da classe `Contador` é instanciado. Dentro do construtor, a variável de instância `cont` é inicializada com o valor zero (`cont = 0;`). Isso garante que todo objeto criado a partir da classe `Contador` terá a variável `cont` iniciada com o valor zero.
+
+### Exercício 12 – Criando objetos com argumentos
+
+> Com base na classe Produto abaixo, complete a classe Principal criando o objeto p1 com o nome “café” e o preço 18. Implemente também os métodos get e set da classe Produto.
+
+```java
+public class Produto {
+    private String nome;
+    private double preço;
+
+    public Produto (String n, double p) {
+        nome = n;
+        preço = p;
+    }
+
+    //gets e sets
+}
+
+public class Principal {
+
+    public static void main (String args[]) {
+            
+        // crie o objeto p1 aqui
+    }
+}
+```
+
+R12: Resposta nos arquivos [Produto.java](src/Produto/Produto.java) e [Principal.java](src/Produto/Principal.java).
+
+## Parte 6 – Exercício Final: Classes Aluno e Principal
+
+### Exercício 13 – Classe Aluno
+
+> Crie uma classe Java chamada Aluno...
+>
+> Variáveis de instância: nome (String, privado), matrícula (String, privado), nota1, nota2, nota3, média (double, privado).
+>
+> Construtor e métodos:
+> - Crie o construtor da classe que inicializa todas as notas com zero.
+> - Crie os métodos get e set para cada variável de instância da classe.
+> - Crie um método que calcule a média do aluno e apresente o status de aprovado (média >= 7) e reprovado (média < 7).
+
+R13: Resposta no arquivo [Aluno.java](src/Aluno.java).
+
+### Exercício 14 – Classe Principal
+
+> Crie outra classe Java chamada Principal, que...
+> - Terá o método main implementado;
+> - Instanciará a classe Scanner (para receber as entradas);
+> - Instanciará 1 objeto da classe Aluno;
+> - Receberá do usuário o nome, a matrícula, a disciplina e as notas de 1 aluno;
+> - Enviará os dados para o objeto da classe Aluno;
+> - Exibirá todos os dados do aluno em um relatório, com status (aprovado,reprovado).
+
+R14: Resposta no arquivo [Principal.java](src/Aluno/Principal.java).
+
