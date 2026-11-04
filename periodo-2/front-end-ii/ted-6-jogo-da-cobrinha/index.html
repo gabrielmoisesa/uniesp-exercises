@@ -131,12 +131,15 @@
     const INTERVALO_MOVIMENTO = 120;
     const canvas = document.getElementById('canvas');
     const contexto = canvas.getContext('2d');
+    const mensagemFim = document.getElementById('mensagem-fim');
+    const pontuacaoFinal = document.getElementById('pontuacao-final');
 
     let cobrinha;
     let comida;
     let direcao;
     let proximaDirecao;
     let intervaloJogo;
+    let jogoEncerrado;
 
     // Inicia a cobrinha no centro e começa o movimento automático.
     function iniciarJogo() {
@@ -144,6 +147,8 @@
       comida = gerarComida();
       direcao = { x: 1, y: 0 };
       proximaDirecao = { x: 1, y: 0 };
+      jogoEncerrado = false;
+      mensagemFim.classList.remove('visivel');
       desenhar();
       clearInterval(intervaloJogo);
       intervaloJogo = setInterval(atualizar, INTERVALO_MOVIMENTO);
@@ -156,6 +161,15 @@
         y: (cobrinha[0].y + direcao.y + QUANTIDADE_CELULAS) % QUANTIDADE_CELULAS
       };
 
+      const colidiuComCorpo = cobrinha.some(
+        (parte) => parte.x === novaCabeca.x && parte.y === novaCabeca.y
+      );
+
+      if (colidiuComCorpo) {
+        fimDeJogo();
+        return;
+      }
+
       direcao = proximaDirecao;
       cobrinha.unshift(novaCabeca);
 
@@ -166,6 +180,14 @@
       }
 
       desenhar();
+    }
+
+    // Para o loop e exibe o resultado quando a cobrinha colide consigo mesma.
+    function fimDeJogo() {
+      jogoEncerrado = true;
+      clearInterval(intervaloJogo);
+      pontuacaoFinal.textContent = '0';
+      mensagemFim.classList.add('visivel');
     }
 
     // Escolhe uma célula livre para a próxima comida.
