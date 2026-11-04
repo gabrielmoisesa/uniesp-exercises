@@ -125,6 +125,81 @@
 
   <script>
     'use strict';
+
+    const TAMANHO_CELULA = 20;
+    const QUANTIDADE_CELULAS = 20;
+    const INTERVALO_MOVIMENTO = 120;
+    const canvas = document.getElementById('canvas');
+    const contexto = canvas.getContext('2d');
+
+    let cobrinha;
+    let direcao;
+    let proximaDirecao;
+    let intervaloJogo;
+
+    // Inicia a cobrinha no centro e começa o movimento automático.
+    function iniciarJogo() {
+      cobrinha = [{ x: 10, y: 10 }];
+      direcao = { x: 1, y: 0 };
+      proximaDirecao = { x: 1, y: 0 };
+      desenhar();
+      clearInterval(intervaloJogo);
+      intervaloJogo = setInterval(atualizar, INTERVALO_MOVIMENTO);
+    }
+
+    // Move a cabeça e reaproveita a posição ao atravessar uma borda.
+    function atualizar() {
+      const novaCabeca = {
+        x: (cobrinha[0].x + direcao.x + QUANTIDADE_CELULAS) % QUANTIDADE_CELULAS,
+        y: (cobrinha[0].y + direcao.y + QUANTIDADE_CELULAS) % QUANTIDADE_CELULAS
+      };
+
+      direcao = proximaDirecao;
+      cobrinha.unshift(novaCabeca);
+      cobrinha.pop();
+      desenhar();
+    }
+
+    // Desenha o fundo e cada quadrado azul da cobrinha.
+    function desenhar() {
+      contexto.fillStyle = '#111827';
+      contexto.fillRect(0, 0, canvas.width, canvas.height);
+      contexto.fillStyle = '#3b82f6';
+
+      cobrinha.forEach((parte) => {
+        contexto.fillRect(
+          parte.x * TAMANHO_CELULA,
+          parte.y * TAMANHO_CELULA,
+          TAMANHO_CELULA - 1,
+          TAMANHO_CELULA - 1
+        );
+      });
+    }
+
+    // Impede inversão de 180 graus e evita que as setas rolem a página.
+    function alterarDirecao(evento) {
+      const direcoes = {
+        ArrowUp: { x: 0, y: -1 },
+        ArrowDown: { x: 0, y: 1 },
+        ArrowLeft: { x: -1, y: 0 },
+        ArrowRight: { x: 1, y: 0 }
+      };
+      const novaDirecao = direcoes[evento.key];
+
+      if (!novaDirecao) {
+        return;
+      }
+
+      evento.preventDefault();
+      const ehInversao = novaDirecao.x === -direcao.x && novaDirecao.y === -direcao.y;
+
+      if (!ehInversao) {
+        proximaDirecao = novaDirecao;
+      }
+    }
+
+    document.addEventListener('keydown', alterarDirecao);
+    iniciarJogo();
   </script>
 </body>
 </html>
