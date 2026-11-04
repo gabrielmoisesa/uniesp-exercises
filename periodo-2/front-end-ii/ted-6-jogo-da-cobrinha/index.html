@@ -133,13 +133,15 @@
     const contexto = canvas.getContext('2d');
     const mensagemFim = document.getElementById('mensagem-fim');
     const pontuacaoFinal = document.getElementById('pontuacao-final');
+    const elementoPontuacao = document.getElementById('pontuacao');
+    const botaoReiniciar = document.getElementById('botao-reiniciar');
 
     let cobrinha;
     let comida;
     let direcao;
     let proximaDirecao;
     let intervaloJogo;
-    let jogoEncerrado;
+    let pontos;
 
     // Inicia a cobrinha no centro e começa o movimento automático.
     function iniciarJogo() {
@@ -147,7 +149,8 @@
       comida = gerarComida();
       direcao = { x: 1, y: 0 };
       proximaDirecao = { x: 1, y: 0 };
-      jogoEncerrado = false;
+      pontos = 0;
+      elementoPontuacao.textContent = pontos;
       mensagemFim.classList.remove('visivel');
       desenhar();
       clearInterval(intervaloJogo);
@@ -174,6 +177,8 @@
       cobrinha.unshift(novaCabeca);
 
       if (novaCabeca.x === comida.x && novaCabeca.y === comida.y) {
+        pontos += 10;
+        elementoPontuacao.textContent = pontos;
         comida = gerarComida();
       } else {
         cobrinha.pop();
@@ -184,9 +189,8 @@
 
     // Para o loop e exibe o resultado quando a cobrinha colide consigo mesma.
     function fimDeJogo() {
-      jogoEncerrado = true;
       clearInterval(intervaloJogo);
-      pontuacaoFinal.textContent = '0';
+      pontuacaoFinal.textContent = pontos;
       mensagemFim.classList.add('visivel');
     }
 
@@ -255,6 +259,15 @@
     }
 
     document.addEventListener('keydown', alterarDirecao);
+    botaoReiniciar.addEventListener('click', iniciarJogo);
+    document.addEventListener('keydown', (evento) => {
+      const podeReiniciar = evento.key === 'Enter' || evento.key === ' ';
+
+      if (podeReiniciar && mensagemFim.classList.contains('visivel')) {
+        evento.preventDefault();
+        iniciarJogo();
+      }
+    });
     iniciarJogo();
   </script>
 </body>
