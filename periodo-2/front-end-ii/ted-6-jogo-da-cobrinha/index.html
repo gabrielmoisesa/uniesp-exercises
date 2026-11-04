@@ -176,7 +176,7 @@
       direcao = proximaDirecao;
       cobrinha.unshift(novaCabeca);
 
-      if (novaCabeca.x === comida.x && novaCabeca.y === comida.y) {
+      if (comida && novaCabeca.x === comida.x && novaCabeca.y === comida.y) {
         pontos += 10;
         elementoPontuacao.textContent = pontos;
         comida = gerarComida();
@@ -208,6 +208,10 @@
         }
       }
 
+      if (celulasLivres.length === 0) {
+        return null;
+      }
+
       return celulasLivres[Math.floor(Math.random() * celulasLivres.length)];
     }
 
@@ -216,13 +220,15 @@
       contexto.fillStyle = '#111827';
       contexto.fillRect(0, 0, canvas.width, canvas.height);
 
-      contexto.fillStyle = '#ef4444';
-      contexto.fillRect(
-        comida.x * TAMANHO_CELULA,
-        comida.y * TAMANHO_CELULA,
-        TAMANHO_CELULA - 1,
-        TAMANHO_CELULA - 1
-      );
+      if (comida) {
+        contexto.fillStyle = '#ef4444';
+        contexto.fillRect(
+          comida.x * TAMANHO_CELULA,
+          comida.y * TAMANHO_CELULA,
+          TAMANHO_CELULA - 1,
+          TAMANHO_CELULA - 1
+        );
+      }
 
       contexto.fillStyle = '#3b82f6';
 
