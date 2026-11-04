@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Moises Alves">
+    <title>Soma de dois números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="calculadora">
+        <h1>Soma de dois números</h1>
+
+        <form id="formulario-soma">
+            <label for="primeiro-numero">Primeiro número</label>
+            <input id="primeiro-numero" name="primeiro-numero" type="number" step="any">
+
+            <label for="segundo-numero">Segundo número</label>
+            <input id="segundo-numero" name="segundo-numero" type="number" step="any">
+
+            <label for="resultado">Resultado</label>
+            <input id="resultado" type="text" readonly aria-describedby="mensagem">
+
+            <p id="mensagem" role="alert" aria-live="polite"></p>
+
+            <div class="acoes">
+                <button type="submit">Somar</button>
+                <button id="limpar" type="button">Limpar</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
