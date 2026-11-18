@@ -1,0 +1,61 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #e9eef4;
+  color: #1b2430;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+main {
+  background: #fff;
+  width: 100%;
+  max-width: 28rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+h1 {
+  margin: 0;
+}
+#contador {
+  color: #5d6b7c;
+  margin: 0.25rem 0 1rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+input[type='text'] {
+  flex: 1;
+  padding: 0.6rem;
+  font: inherit;
+}
+button {
+  padding: 0.6rem 1rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #d3dbe4;
+  cursor: pointer;
+}
+
+li.feita {
+  color: #5d6b7c;
+  text-decoration: line-through;
+}
+li button {
+  border: 0;
+  background: none;
+  color: #a63a3a;
+}
